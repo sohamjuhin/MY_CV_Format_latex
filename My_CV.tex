@@ -1,0 +1,298 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2023 Soham Das
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{SOHAM DAS} \\[7.5pt]
+\address{Address:- RAHUL PALACE 64/4/1 SHIBPUR ROAD SHIBPUR HOWRAH-2,GROUD FLOOR} \\[2.0pt]
+\href{https://github.com/sohamjuhin}{\raisebox{-0.05\height}\faGithub\ sohamjuhin} \ $|$ \ 
+\href{https://linkedin.com/in/soham-das-2ab73212b}{\raisebox{-0.05\height}\faLinkedin\ SohamDas} \ $|$ \ 
+\href{https://sohamjuhin.github.io/SohamJuhinDas.github.io/}{\raisebox{-0.05\height}\faGlobe\ mysite} \ $|$ \ 
+\href{mailto:juhinsohamdas@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ juhinsohamdas@gmail.com} \ $|$ \ 
+\href{tel:+91.6289071973}{\raisebox{-0.05\height}\faMobile \ +91.6289071973}\\ \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Education}
+Maulana Abul Kalam Azad University of Technology, formerly known as West Bengal University of Technology --- Master of Science Information Technology in Cyber Security, \hfill \textit{(Expected June 2023)} 
+\textbf{GPA: 8.48/10.0(1styear)}                                                 
+
+\textbf{Research Interests:}\textit{Malware Detection & Analysis, Quantum information security, Cyber physical systems security, Bio-information Security,Computer/Digital Forensics,Cryptology, Machine Learning,Computer Vision,Algorithms.}
+
+
+\textbf{Coursework:-}\textit{Discrete Mathematics of Computer Science,              Advanced Data Structures & Algorithms,Cryptology,   Advanced Web Technology,Research Methodology and IPR,Machine Learning, Ethical Hacking, Network Security,Digital Forensics, Malware Detection & Analysis,Cyber Law and Cyber Crime Investigation,Project Management & Entrepreneurship.
+}
+
+
+Maulana Abul Kalam Azad University of Technology,formerly known as West Bengal University of Technology from George Group of College-----Bachelor of Computer Application(Honours),\hfill\textit{(Aug2018-Aug2021)}                                                                                                    
+\textbf{DGPA: 7.86/10.0}
+
+\textbf{Coursework:-}\textit{Digital Electronics, Environment Studies, C Programming, Basic Mathematical Computation(Algebra, Linear Algebra, Two Dimensional Geometry, Differential & integral Calculus),Computer Architecture, Software Engineering, Data Structure with C, Advanced Mathematical Computation(Statistical Methods and Algorithms, Differential Equations, Sequence and Series), English Language and Communication,Operating System, Object Oriented Programming With C++,Computer Graphics, Mathematics for Computing(Graph Theory, Probability Theory, Frequency Distribution), Database Management System,Programming With JAVA, Computer Networking, Numerical Analysis/Numerical and scientific computing ,Cyber Security, Unix and Shell Programming, Management and Accounting,Python Programming, Web Technology with PHP, Values and Ethics of Profession.
+
+}
+%Experience
+\section{ Professional Certificates
+}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{1) edX Verified Certificate for Product Design, Prototyping, and Testing
+} & \hfill May 2022 \\[1.75pt]
+  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{2)Amazon SageMaker:Simplifying Machine Learning Application Development} & \hfill Aug 2021 \\[1.75pt]
+  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{3)edX Verified Certificate for Migrating to the AWS Cloud} & \hfill Sep 2021 \\[1.75pt]
+    \\
+\end{tabularx}
+
+
+%Projects
+\section{Summer Internship}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Techtree Technologies} & \hfill Aug 2020 - Oct 2020 \\[3.75pt]
+\textbf{Android App Development Div,Kolkata, West Bengal, India} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Android App Development in Java. Grocery Shop Android Application coding in Java and Firbased.}  \\[3.75pt]
+\end{tabularx}     \\
+\\
+
+%--------------------------------
+
+
+
+
+
+
+
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{GlobNet Systems---------                   ---------- (Jul2020-Aug2020)}\\[0.72pt]
+\textbf{Digital Marketing Div, Kolkata, West Bengal, India} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{I am working in Competitor Analysis,Email,Social Media}  \\[3.75pt]
+Marketing,Contents Writing,Video making,Affiliate Marketing,Advertisement Designing etc.
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+%\section{Publications}
+%\begin{refsection}[citations.bib]
+%\nocite{*}
+%\printbibliography[heading=none]
+%\end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Scientific Programming Languages:}\normalsize{C/C++,Python,Julia,Matlab/Octave,Java.}\\[2.75pt]
+\textbf{Web Programming Languages:}\normalsize{SQL,HTML,CSS,PHP,JavaScript,React}\\[2.75pt]
+\textbf{Scripting Programming Languages:}\normalsize{Shell Scripting(Linux),PowerShell(Windows)}\\[2.75pt]
+\textbf{Text Programming Languages:}\normalsize{latex}\\[2.75pt]
+\textbf{ML Toolkit:}\normalsize{PyTorch,kaldi,Keras, TensorFlow,OpenCv etc.}\\[2.75pt]
+\textbf{Cyber Security Toolkits:}\normalsize{Metasploit,Burp Suite,Nmap,OWASP Zed Attack Proxy,Wireshark,Aircrack-ng.}\\[0.72pt]
+,John the Ripper,Nikto,Snort,Sql Injection \\
+\textbf{Digital Forensics Toolkits:-}\normalsize{Autospy,Encrypted Disk Detector,Sleuth Kit, Volatility,SIFT, MVT,}\\[0.72pt]
+NFI Defraser, Dumpzilla.\\
+\textbf{Hardware Tools:}\normalsize{Raspberry PI, Arduino}\\[0.72pt]
+\textbf{Softwares:}\normalsize{Visual Studio, Anaconda, Android Studio,PyCharm,Sublime Text,Atom.}\\
+\textbf{Platforms:}\normalsize{Linux, Mac and Windows.}\\[0.72pt]
+
+
+\end{tabularx}
+%-----------------------------------------------------------------------------------------------
+\section{Projects
+}
+\textbf{Research Projects:Smart City Intrusion Detection System Using Machine Learning}\\[0.69pt]                                                                                                    
+        \textit{Jun2022-Present}\\[0.80pt]   
+\textbf{Research Guide-}       
+Prof.Dr Sibamay Dasgupta(Director School of Engineering Science-MAKAUT,WB 
+                                        
+
+%---------------------------------------------------------------------------------------
+% Vol
+%-------------------------------------------------------------------------------------
+\section{ Leadership Skills / Professional Organization Members
+}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{8)IEEE Computer Society-------Science and Technology } &\hfill Mar 2023 - Present \\[3.75pt]
+
+\textbf{Student Member}  
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{7)IEEE-------Science and Technology }&\hfill Feb 2023 - Present\\[3.75pt]
+
+\textbf{Student Member} 
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{6)Google Developers Group-------Science and Technology }&\hfill Dec 2022 - Present \\[3.75pt]
+
+\textbf{Google Developer Group Chapter Kolkata Volunteer/Members} 
+\end{tabularx}
+
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{5)BSides Bangalore-------Science and Technology } &\hfill Feb 2023 - Present \\[3.75pt]
+
+\textbf{Community Member}  
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{4)OWASP® Foundation-------Science and Technology } &\hfill Aug 2022 - Present \\[3.75pt]
+
+\textbf{Community Member}  
+\end{tabularx}
+
+
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{3)Docker, Inc-------Science and Technology } &\hfill Jan 2023 - Present \\[3.75pt]
+
+\textbf{Community Member}  
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{2)null - The Open Security Community--Cyber security community}&\hfill Jul 2022-Present \\[3.75pt]
+
+\textbf{Community Member}  
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{1)Paschim Banga Vigyan Mancha-Science and Technology•Social Services
+} & \hfill Sep 2018-Present  \\[3.75pt]
+\textbf{Committee Member}
+\end{tabularx}
+\vfill
+\center{\footnotesize Last updated: \today}\\[0.69pt]
+
+\end{document}
